@@ -1,7 +1,6 @@
 Joing redux and react using thunk
 
-This a mashup of @stephenGrider [ReduxSimpleStarter](https://github.com/StephenGrider/ReduxSimpleStarter) 
-and.. [Create React App](https://github.com/facebookincubator/create-react-app).
+This a mashup of  [ReduxSimpleStarter](https://github.com/StephenGrider/ReduxSimpleStarter) 
 
-A simple blog site, linked with a firebase db
+A simple crud site, linked with a firebase db
 set up with sass available for styling
