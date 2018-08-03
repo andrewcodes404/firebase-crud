@@ -1,0 +1,159 @@
+@import "partials/0_reset";
+@import "partials/1_mixins";
+@import "partials/2_settings";
+///////////////////////////////////
+///****   some globals   ****///
+///////////////////////////////////
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+///images
+img {
+  width: 100%;
+  vertical-align: bottom; //stops that annoying 2px gap at the btm of imgs
+  height: auto;
+}
+
+.img-cont {
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+////////////////////////////////////////////////////////////////////////////
+///****   typography     typography     typography     typography   ****///
+///////////////////////////////////////////////////////////////////////////
+/// sets the html global font size when your font-size is in REMS then it will change accordingly
+html {
+  font-size: 16px; // @media (min-width: $media-sml) {font-size:16px}
+  @media (min-width: $media-med) {
+    font-size: 20px;
+  } // @media (min-width: $media-lrg) {font-size:18px}
+  // @media (min-width: $media-lrg-xl) {font-size:19px}
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+//specific fo h tags
+@include h-tags {
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  @include fontSize(40px);
+  @include b1();
+}
+
+h2 {
+  @include fontSize(26px);
+  text-align: center;
+}
+
+h3 {
+  @include fontSize(22px);
+  text-decoration: underline;
+}
+
+h4 {
+  @include fontSize(20px);
+}
+
+h5 {
+  @include fontSize(18px);
+}
+
+p {
+  @include fontSize(15px);
+  line-height: 1.4; // margin-bottom: 1rem;
+}
+
+small {
+  @include fontSize(14px);
+}
+
+////****href ****/////
+a,
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    color: orange;
+  }
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  max-width: 1500px;
+  display: flex; // flex-direction: column;
+  min-height: 100vh; // justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+// REACT STYLE ---- REACT STYLE ---- REACT STYLE ----
+.crud{
+  background-color:yellow;
+  padding: 0 5px;
+  border-radius: 5px;
+  // color: green;
+}
+
+.box {
+  border: 1px dotted lightseagreen;
+  padding: 1rem;
+   min-height: 340px;
+  min-width: 300px;
+  margin: 1rem;
+}
+
+.text-field {
+  max-width: 200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto .5rem;
+  input label {
+    margin-right: 10px;
+  }
+}
+
+.error-cont {
+  max-width: 200px;
+  text-align: right;
+  margin: 0 auto .5rem;
+}
+
+.error {
+  color: red;
+}
+
+.btn-cont {
+  margin: 0 auto .5rem;
+  max-width: 200px;
+  text-align: right;
+}
+
+button {
+  cursor: pointer;
+  transition: .4s; // font-size: 1rem;
+  &:hover {
+    background-color: orangered;
+    color: white;
+  }
+}
+
+.flex-row {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
